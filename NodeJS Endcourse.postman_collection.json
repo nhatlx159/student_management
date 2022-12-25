@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "b1f887c0-cd4e-43a1-bd9e-26f5f3293cf3",
+		"name": "NodeJS Endcourse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13903516"
+	},
+	"item": [
+		{
+			"name": "Post Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullname\": \"Tran Minh Quan\",\r\n    \"birthday\": \"08-05-2000\",\r\n    \"CI\": \"080086867722\",\r\n    \"image\": \"https://cdn.sforum.vn/sforum/wp-content/uploads/2022/12/genshin-wanderer-3.jpg\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/student/addstudent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"addstudent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch Student",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullname\": \"Vo Hong Phu\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/student/editstudent/6399a624d6fa174f0f4d0215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"editstudent",
+						"6399a624d6fa174f0f4d0215"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch Lecturer",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CI\": \"999099919992\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/lecturer/editlecturer/6399b0fe2e05c76ac704d36a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lecturer",
+						"editlecturer",
+						"6399b0fe2e05c76ac704d36a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Class",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"className\": \"Lab 04\",\r\n    \"courses\": {\r\n        \"nameCourse\": \"Project 2\", \r\n        \"startAt\": \"2023-03-01\", \r\n        \"endAt\": \"2023-04-30\", \r\n        \"studyTime\": \"18:00 - 21:00\", \r\n        \"lecturer\": \"Nguyen Phuong Nam\" \r\n        },\r\n    \"capacity\": \"35\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/class/addclass",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"class",
+						"addclass"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Lecturer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"fullname\": \"Hoang Nguyen Minh Tuan\",\r\n    \"birthday\": \"1986-03-15\",\r\n    \"CI\": \"123456789123\",\r\n    \"image\": \"https://codelearn.io/Upload/Blog/react-js-co-ban-phan-1-63738082145.3856.jpg\",\r\n    \"majors\": \"Tech Lead tai Momo Viet Nam\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/lecturer/addlecturer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lecturer",
+						"addlecturer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/student/getallstudent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"getallstudent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Student By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/student//getstudent/63999cf9d6fa174f0f4d0211",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"",
+						"getstudent",
+						"63999cf9d6fa174f0f4d0211"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Lecturer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/lecturer/getalllecturer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lecturer",
+						"getalllecturer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Lecturer By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/lecturer/getlecturer/6399b0fe2e05c76ac704d36a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lecturer",
+						"getlecturer",
+						"6399b0fe2e05c76ac704d36a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Student Register Course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"student_id\": \"63999cf9d6fa174f0f4d0211\",\r\n    \"class_id\": \"6399abbd2e05c76ac704d364\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/student/registercourse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"registercourse"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
